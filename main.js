@@ -1,8 +1,8 @@
-functio addTask() {
+function addTask() {
     let taskInput = document.getElementById("taskInput");
     let taskList = document.getElementById("taskList");
 
-    if (taskInput == null) {
+    if (taskInput == '') {
         alert("Please enter a task");
         return;
     }
@@ -10,7 +10,7 @@ functio addTask() {
 
     li.textContent = taskInput.value;
 
-    taskList.value = null;
+    taskList.value = '';
 
     li.onclick = function () {
         this.parentNode.removeChild(this);
